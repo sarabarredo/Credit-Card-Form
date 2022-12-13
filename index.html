@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Form | Glassmorphism | Sara Barredo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="card">
+        <form>
+            <h1 class="card-title">Método de pago</h1>
+            <div class="row">
+                <div class="col">
+                    <label for="cardNumber" class="card-label">Número de tarjeta</label>
+                    <input type="text" class="card-input large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
+                </div>
+                <div class="col card-chip">
+                    <img src="img/chip.png" alt="chip">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="cardExpiry" class="card-label">Fecha de caducidad</label>
+                    <input type="text" class="card-input" id="cardExpiry" placeholder="xx/xx">
+                </div>
+                <div class="col">
+                    <label for="CardCcv" class="card-label">CCV</label>
+                    <input type="text" class="card-input" id="cardCcv" placeholder="xxx">
+                </div>
+                <div class="col card-brand"><i id="cardBrand"></i></div>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

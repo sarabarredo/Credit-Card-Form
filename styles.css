@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(img/background.jpg) center/cover;
+    overflow: hidden;
+}
+
+.card {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+                rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    backdrop-filter: blur(3px);
+    padding: 24px;
+    border-radius: 16px;
+    animation: cardEnter 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cardEnter {
+    from {
+        transform: translateY(100vh);
+        opacity: 0.1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 40px;
+    color: #1d005f;
+    margin: 16px 0 24px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.col {
+    padding-right: 32px;
+}
+
+.card-input {
+    background: none;
+    border: none;
+    border-bottom: dashed 3px rgba(255, 255, 255, 0.1);
+    font-size: 19px;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+} 
+
+.card-input.large {
+    font-size: 32px;
+}
+
+.card-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: none;
+}
+
+.card-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-label {
+    display: block;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    font-weight: 400;
+}
+
+.card-chip {
+    align-self: flex-end;
+}
+
+.card-chip img {
+    width: 72px;
+}
+
+.col.card-brand {
+    font-size: 48px;
+    color: #fff;
+    min-width: 100px;
+    min-height: 75px;
+    text-align: right;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
